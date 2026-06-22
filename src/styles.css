@@ -1,0 +1,139 @@
+@import "tailwindcss";
+@source "../src";
+@import "@fontsource/playfair-display/600.css";
+@import "@fontsource/playfair-display/700.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-cream: var(--cream);
+  --color-peach: var(--peach);
+  --color-rose: var(--rose);
+  --color-terracotta: var(--terracotta);
+  --color-ink: var(--ink);
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Canva-matched palette — cream #f2f1e9 + dark brown #593d31 */
+  --background: oklch(0.948 0.008 95);     /* #f2f1e9 */
+  --foreground: oklch(0.32 0.045 45);      /* #593d31 */
+  --ink: oklch(0.32 0.045 45);             /* #593d31 */
+
+  --cream: oklch(0.948 0.008 95);
+  --cream-soft: oklch(0.97 0.006 95);
+  --peach: oklch(0.86 0.04 50);
+  --rose: oklch(0.74 0.05 25);
+  --terracotta: oklch(0.55 0.1 45);
+  --brown: oklch(0.32 0.045 45);
+
+  --card: oklch(0.985 0.006 95);
+  --card-foreground: oklch(0.32 0.045 45);
+  --popover: oklch(0.985 0.006 95);
+  --popover-foreground: oklch(0.32 0.045 45);
+
+  --primary: oklch(0.32 0.045 45);
+  --primary-foreground: oklch(0.96 0.008 95);
+
+  --secondary: oklch(0.9 0.02 65);
+  --secondary-foreground: oklch(0.32 0.045 45);
+
+  --muted: oklch(0.93 0.012 90);
+  --muted-foreground: oklch(0.45 0.03 50);
+
+  --accent: oklch(0.93 0.018 70);
+  --accent-foreground: oklch(0.32 0.045 45);
+
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(0.86 0.015 75);
+  --input: oklch(0.86 0.015 75);
+  --ring: oklch(0.32 0.045 45);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.015em;
+    font-weight: 700;
+    color: var(--brown);
+  }
+}
+
+/* Canva batik swirl pattern background */
+.batik-bg {
+  background-color: var(--cream);
+  background-image: var(--batik-pattern-image);
+  background-size: 520px auto;
+  background-repeat: repeat;
+}
+
+
+
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+}
+
+.story-link {
+  position: relative;
+  display: inline-block;
+}
+.story-link::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -2px;
+  width: 100%; height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+.story-link:hover::after,
+.story-link[data-active="true"]::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
