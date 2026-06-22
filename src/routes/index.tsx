@@ -317,7 +317,7 @@ function Index() {
       </AnimatePresence>
 
       {/* ===== HERO ===== */}
-      <section id="top" className="relative min-h-screen flex items-center lg:items-end overflow-hidden pt-16">
+      <section id="top" className="relative min-h-screen flex items-start lg:items-end overflow-hidden pt-16">
         <img
           src={heroMosque}
           alt="Masjid Agung Pekalongan"
@@ -328,7 +328,7 @@ function Index() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/15" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-transparent" />
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-10 pb-16 sm:pb-24 lg:pb-32 w-full">
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-10 pt-12 pb-16 sm:pb-24 lg:pt-0 lg:pb-32 w-full">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -338,7 +338,7 @@ function Index() {
             <span className="inline-block px-4 py-1.5 sm:px-5 sm:py-2 rounded-full bg-cream text-ink text-[10px] sm:text-[11px] font-medium tracking-[0.18em] uppercase shadow-sm">
               City of Crafts & Folk Arts
             </span>
-            <h1 className="mt-4 sm:mt-6 font-serif text-4xl sm:text-5xl md:text-7xl leading-[1.05] text-cream drop-shadow-md">
+            <h1 className="mt-4 sm:mt-6 font-serif text-[2.5rem] sm:text-5xl md:text-7xl leading-[1.05] text-cream drop-shadow-md">
               Pekalongan :<br />Kota Batik
             </h1>
             <p className="mt-3 sm:mt-6 text-sm sm:text-base md:text-lg text-cream/90 max-w-xl leading-relaxed drop-shadow">
