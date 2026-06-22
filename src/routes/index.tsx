@@ -328,7 +328,7 @@ function Index() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/15" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-transparent" />
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-10 pt-12 pb-16 sm:pb-24 lg:pt-0 lg:pb-32 w-full">
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-10 pt-24 pb-16 sm:pb-24 lg:pt-0 lg:pb-32 w-full">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
