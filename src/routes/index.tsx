@@ -6,7 +6,7 @@ import {
   Phone, Clock, Ticket, Menu, Music, Pause, Play, Volume2, VolumeX,
 } from "lucide-react";
 
-import heroMosque from "@/assets/pekalongan-hero.jpeg";
+import heroMosque from "@/assets/pekalongan.hero.jpeg";
 import motifJlamprang from "@/assets/motif-jlamprang.jpeg";
 import motifTujuhRupa from "@/assets/motif-tujuhrupa.jpg";
 import motifBuketan from "@/assets/motif-buketan.jpeg";
