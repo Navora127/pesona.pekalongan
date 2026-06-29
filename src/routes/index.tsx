@@ -11,12 +11,23 @@ import motifJlamprang from "@/assets/motif-jlamprang.jpeg";
 import motifTujuhRupa from "@/assets/motif-tujuhrupa.jpg";
 import motifBuketan from "@/assets/motif-buketan.jpeg";
 import motifHokokai from "@/assets/motif-hokokai.jpeg";
-import artisan from "@/assets/museum.jpeg";
 import kampungBatik from "@/assets/kampungbatik.jpeg";
 import pekalonganLandmark from "@/assets/pekalongan-landmark.png";
 import museum from "@/assets/museum.jpeg";
 import batikPattern from "@/assets/motif-pattern.jpg";
 import cozyMusic from "@/assets/cozy.mpeg";
+
+// Process step images
+import imgNyungging from "@/assets/01_nyungging.png";
+import imgNjaplak from "@/assets/02_njaplak.png";
+import imgNglowong from "@/assets/03_nglowong.png";
+import imgNgiseni from "@/assets/04_ngiseni.png";
+import imgNyolet from "@/assets/05_nyolet.png";
+import imgMopok from "@/assets/06_mopok.png";
+import imgNgrentesi from "@/assets/07_ngrentesi.png";
+import imgNyumii from "@/assets/08_nyumii.png";
+import imgNyoga from "@/assets/09_nyoga.png";
+import imgNglorod from "@/assets/10_nglorod.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -39,16 +50,66 @@ const motifs = [
 ];
 
 const processSteps = [
-  { n: "01", title: "Nyungging", desc: "Membuat pola pada kertas." },
-  { n: "02", title: "Njaplak", desc: "Memindahkan pola pada kertas ke kain." },
-  { n: "03", title: "Nglowong", desc: "Pelekatan malam pada canting sesuai pola." },
-  { n: "04", title: "Ngiseni", desc: "Pemberian motif isen pada ornamen utama." },
-  { n: "05", title: "Nyolet", desc: "Pewarnaan bagian tertentu dengan kuas." },
-  { n: "06", title: "Mopok", desc: "Menutup bagian yang dicolet dengan malam." },
-  { n: "07", title: "Ngrentesi", desc: "Pemberian titik pada klowongan." },
-  { n: "08", title: "Nyumi'i", desc: "Menutup bagian tertentu dengan malam." },
-  { n: "09", title: "Nyoga", desc: "Penyelupan kain dengan warna coklat (sogan)." },
-  { n: "10", title: "Nglorod", desc: "Penghilangan malam dengan merendamnya dalam air mendidih." },
+  {
+    n: "01", title: "Nyungging",
+    desc: "Membuat pola pada kertas.",
+    detail: "Nyungging adalah tahap awal dalam proses membatik, yaitu membuat sketsa atau pola desain batik di atas kertas. Pengrajin menggambar motif dengan teliti menggunakan pensil, memperhatikan setiap detail ornamen yang akan dipindahkan ke kain. Proses ini menentukan keindahan akhir motif batik dan membutuhkan keahlian seni yang tinggi.",
+    img: imgNyungging,
+  },
+  {
+    n: "02", title: "Njaplak",
+    desc: "Memindahkan pola pada kertas ke kain.",
+    detail: "Njaplak adalah proses memindahkan pola yang telah digambar di kertas ke permukaan kain menggunakan pensil atau kapur. Kain diletakkan di atas meja rata, kemudian pola dijiplak dengan hati-hati agar garis-garis motif tercetak dengan akurat di atas kain putih yang akan dibatik.",
+    img: imgNjaplak,
+  },
+  {
+    n: "03", title: "Nglowong",
+    desc: "Pelekatan malam pada canting sesuai pola.",
+    detail: "Nglowong adalah proses menuangkan malam (lilin batik) panas melalui canting mengikuti garis-garis utama pola yang sudah dijiplak. Malam berfungsi sebagai perintang warna agar bagian tertentu tidak terkena pewarna. Tahap ini membutuhkan ketenangan dan kesabaran karena kesalahan sulit diperbaiki.",
+    img: imgNglowong,
+  },
+  {
+    n: "04", title: "Ngiseni",
+    desc: "Pemberian motif isen pada ornamen utama.",
+    detail: "Ngiseni adalah proses mengisi bagian dalam ornamen utama dengan motif-motif pengisi (isen-isen) seperti titik-titik, garis halus, atau pola kecil lainnya. Isen-isen memberi kekayaan visual dan kedalaman pada motif batik. Proses ini sangat membutuhkan ketelitian dan ciri khas pengrajin.",
+    img: imgNgiseni,
+  },
+  {
+    n: "05", title: "Nyolet",
+    desc: "Pewarnaan bagian tertentu dengan kuas.",
+    detail: "Nyolet adalah proses mewarnai bagian-bagian tertentu dari motif batik menggunakan kuas kecil. Pewarna yang digunakan bisa berupa zat sintetis atau pewarna alami. Teknik ini memberikan gradasi warna yang lebih beragam pada motif batik, menciptakan tampilan yang lebih hidup dan dinamis.",
+    img: imgNyolet,
+  },
+  {
+    n: "06", title: "Mopok",
+    desc: "Menutup bagian yang dicolet dengan malam.",
+    detail: "Mopok adalah proses menutup kembali bagian-bagian yang sudah diwarnai dengan nyolet menggunakan malam. Tujuannya agar warna yang sudah diaplikasikan terlindungi dari pewarnaan celup berikutnya. Proses ini memerlukan ketepatan agar malam benar-benar menutupi seluruh area yang dimaksud.",
+    img: imgMopok,
+  },
+  {
+    n: "07", title: "Ngrentesi",
+    desc: "Pemberian titik pada klowongan.",
+    detail: "Ngrentesi adalah proses memberi titik-titik halus menggunakan canting khusus pada bagian klowongan (garis-garis utama motif) yang belum terisi. Titik-titik ini berfungsi sebagai ornamen tambahan yang memperindah batik dan menjadi salah satu ciri khas batik tulis Pekalongan yang mendetail.",
+    img: imgNgrentesi,
+  },
+  {
+    n: "08", title: "Nyumi'i",
+    desc: "Menutup bagian tertentu dengan malam.",
+    detail: "Nyumi'i adalah proses menutup bidang-bidang tertentu yang luas pada kain dengan malam menggunakan kuas atau canting besar. Tahap ini dilakukan sebelum proses pencelupan warna dasar agar bagian-bagian yang ingin dipertahankan warnanya tidak terkena pewarna.",
+    img: imgNyumii,
+  },
+  {
+    n: "09", title: "Nyoga",
+    desc: "Penyelupan kain dengan warna coklat (sogan).",
+    detail: "Nyoga adalah proses mencelup kain ke dalam larutan pewarna coklat yang disebut sogan, berasal dari kulit kayu pohon soga. Warna sogan menjadi ciri khas batik tradisional Jawa, memberikan nuansa coklat keemasan yang hangat dan alami. Proses ini dilakukan beberapa kali untuk mendapatkan kedalaman warna yang diinginkan.",
+    img: imgNyoga,
+  },
+  {
+    n: "10", title: "Nglorod",
+    desc: "Penghilangan malam dengan merendamnya dalam air mendidih.",
+    detail: "Nglorod adalah tahap akhir proses membatik, yaitu menghilangkan seluruh malam yang melekat pada kain dengan cara merendam dan merebus kain dalam air mendidih yang dicampur abu atau soda abu. Setelah malam larut, kain dicuci bersih dan dikeringkan, sehingga motif batik yang indah pun terungkap secara sempurna.",
+    img: imgNglorod,
+  },
 ];
 
 const navItems = [
@@ -97,7 +158,11 @@ const museums = [
 function Index() {
   const [active, setActive] = useState("history");
   const [openMotif, setOpenMotif] = useState<string | null>(null);
+  const [motifSlideDir, setMotifSlideDir] = useState<1 | -1>(1);
   const [openMuseum, setOpenMuseum] = useState<string | null>(null);
+  const [openProcessIndex, setOpenProcessIndex] = useState<number | null>(null);
+  const [slideDir, setSlideDir] = useState<1 | -1>(1);
+  const [zoomImg, setZoomImg] = useState<{ src: string; alt: string } | null>(null);
   const [navOpen, setNavOpen] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
@@ -163,6 +228,42 @@ function Index() {
 
   const activeMotif = motifs.find((m) => m.id === openMotif);
   const activeMuseum = museums.find((m) => m.id === openMuseum);
+  const activeProcess = openProcessIndex !== null ? processSteps[openProcessIndex] : null;
+
+  const goNextProcess = () => {
+    setSlideDir(1);
+    setOpenProcessIndex((i) => (i === null ? 0 : (i + 1) % processSteps.length));
+  };
+  const goPrevProcess = () => {
+    setSlideDir(-1);
+    setOpenProcessIndex((i) => (i === null ? 0 : (i - 1 + processSteps.length) % processSteps.length));
+  };
+
+  const activeMotifIndex = motifs.findIndex((m) => m.id === openMotif);
+  const goNextMotif = () => {
+    setMotifSlideDir(1);
+    const next = (activeMotifIndex + 1) % motifs.length;
+    setOpenMotif(motifs[next].id);
+  };
+  const goPrevMotif = () => {
+    setMotifSlideDir(-1);
+    const prev = (activeMotifIndex - 1 + motifs.length) % motifs.length;
+    setOpenMotif(motifs[prev].id);
+  };
+
+  // ESC key to close modals
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setZoomImg(null);
+        setOpenProcessIndex(null);
+        setOpenMotif(null);
+        setOpenMuseum(null);
+      }
+    };
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, []);
 
   return (
     <div
@@ -473,18 +574,24 @@ function Index() {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5">
             {processSteps.map((s, i) => (
-              <motion.div
+              <motion.button
                 key={s.n}
+                onClick={() => { setSlideDir(1); setOpenProcessIndex(i); }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: (i % 5) * 0.08 }}
-                className="p-5 rounded-2xl bg-card border border-border/70 hover:border-primary/50 transition-colors"
+                whileHover={{ scale: 1.04, y: -4 }}
+                whileTap={{ scale: 0.97 }}
+                className="group text-left p-5 rounded-2xl bg-card border border-border/70 hover:border-primary/50 hover:shadow-lg transition-all cursor-pointer"
               >
                 <span className="font-serif text-4xl text-primary/60">{s.n}</span>
                 <h4 className="mt-2 font-serif text-lg">{s.title}</h4>
-                <p className="mt-2 text-sm text-foreground/70 leading-relaxed">{s.desc}</p>
-              </motion.div>
+                <p className="mt-2 text-sm text-foreground/70 leading-relaxed line-clamp-3">{s.desc}</p>
+                <p className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-primary">
+                  Explore <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                </p>
+              </motion.button>
             ))}
           </div>
         </div>
@@ -675,20 +782,96 @@ function Index() {
               initial={{ scale: 0.92, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.92, opacity: 0 }}
               transition={{ type: "spring", damping: 25 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative bg-background rounded-3xl overflow-hidden max-w-3xl w-full grid md:grid-cols-2"
+              className="relative bg-background rounded-3xl overflow-hidden max-w-3xl w-full flex flex-col md:grid md:grid-cols-2"
+              style={{ maxHeight: "88dvh" }}
             >
-              <button onClick={() => setOpenMotif(null)} className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-background/90 backdrop-blur flex items-center justify-center hover:bg-background">
+              {/* Close */}
+              <button onClick={() => setOpenMotif(null)} className="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-background/90 backdrop-blur flex items-center justify-center hover:bg-background border border-border/50 transition-colors">
                 <X className="w-4 h-4" />
               </button>
-              <img src={activeMotif.img} alt={activeMotif.title} className="w-full h-64 md:h-full object-cover" />
-              <div className="p-8">
-                <p className="text-[10px] uppercase tracking-[0.18em] text-primary font-semibold">{activeMotif.tag}</p>
-                <h3 className="mt-2 font-serif text-3xl">{activeMotif.title}</h3>
-                <p className="mt-4 text-foreground/70 leading-relaxed">{activeMotif.desc}</p>
-                <p className="mt-3 text-sm text-foreground/60 leading-relaxed">
-                  Motif ini menjadi bagian penting dari identitas batik pesisir Pekalongan,
-                  mencerminkan akulturasi budaya yang telah berlangsung selama berabad-abad.
+
+              {/* Image with slide */}
+              <div className="relative overflow-hidden h-52 md:h-auto">
+                <AnimatePresence mode="wait" custom={motifSlideDir}>
+                  <motion.img
+                    key={activeMotif.id}
+                    custom={motifSlideDir}
+                    variants={{
+                      enter: (dir: number) => ({ x: dir * 60, opacity: 0 }),
+                      center: { x: 0, opacity: 1 },
+                      exit: (dir: number) => ({ x: dir * -60, opacity: 0 }),
+                    }}
+                    initial="enter" animate="center" exit="exit"
+                    transition={{ duration: 0.35, ease: "easeInOut" }}
+                    src={activeMotif.img}
+                    alt={activeMotif.title}
+                    className="w-full h-full object-cover cursor-zoom-in"
+                    onClick={() => setZoomImg({ src: activeMotif.img, alt: activeMotif.title })}
+                  />
+                </AnimatePresence>
+                {/* Zoom hint */}
+                <div className="absolute top-3 right-3 w-7 h-7 rounded-full bg-background/80 backdrop-blur flex items-center justify-center pointer-events-none">
+                  <svg className="w-3.5 h-3.5 text-foreground/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                    <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                  </svg>
+                </div>
+                {/* Progress dots */}
+                <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5">
+                  {motifs.map((m, idx) => (
+                    <button
+                      key={m.id}
+                      onClick={() => { setMotifSlideDir(idx > activeMotifIndex ? 1 : -1); setOpenMotif(m.id); }}
+                      className={`rounded-full transition-all duration-300 ${m.id === openMotif ? "w-5 h-2 bg-cream" : "w-2 h-2 bg-cream/50 hover:bg-cream/80"}`}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="flex flex-col p-6 md:p-8 min-h-0 overflow-y-auto">
+                {/* Counter */}
+                <p className="text-[10px] text-foreground/40 uppercase tracking-[0.18em] mb-3">
+                  {activeMotifIndex + 1} dari {motifs.length}
                 </p>
+                <AnimatePresence mode="wait" custom={motifSlideDir}>
+                  <motion.div
+                    key={activeMotif.id}
+                    custom={motifSlideDir}
+                    variants={{
+                      enter: (dir: number) => ({ x: dir * 30, opacity: 0 }),
+                      center: { x: 0, opacity: 1 },
+                      exit: (dir: number) => ({ x: dir * -30, opacity: 0 }),
+                    }}
+                    initial="enter" animate="center" exit="exit"
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="flex-1"
+                  >
+                    <p className="text-[10px] uppercase tracking-[0.18em] text-primary font-semibold">{activeMotif.tag}</p>
+                    <h3 className="mt-2 font-serif text-2xl md:text-3xl">{activeMotif.title}</h3>
+                    <p className="mt-4 text-foreground/70 leading-relaxed text-sm">{activeMotif.desc}</p>
+                    <p className="mt-3 text-sm text-foreground/60 leading-relaxed">
+                      Motif ini menjadi bagian penting dari identitas batik pesisir Pekalongan,
+                      mencerminkan akulturasi budaya yang telah berlangsung selama berabad-abad.
+                    </p>
+                  </motion.div>
+                </AnimatePresence>
+
+                {/* Prev / Next */}
+                <div className="flex items-center justify-between gap-3 mt-6 pt-5 border-t border-border shrink-0">
+                  <button
+                    onClick={goPrevMotif}
+                    className="flex items-center gap-1.5 px-4 py-2 rounded-full border border-border text-xs sm:text-sm font-medium hover:bg-muted transition-colors"
+                  >
+                    <ArrowRight className="w-3.5 h-3.5 rotate-180" /> Previous
+                  </button>
+                  <button
+                    onClick={goNextMotif}
+                    className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-primary-foreground text-xs sm:text-sm font-medium hover:bg-primary/90 transition-colors"
+                  >
+                    Next <ArrowRight className="w-3.5 h-3.5" />
+                  </button>
+                </div>
               </div>
             </motion.div>
           </motion.div>
@@ -756,6 +939,179 @@ function Index() {
                 </div>
               </div>
             </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      {/* ===== PROCESS MODAL ===== */}
+      <AnimatePresence>
+        {activeProcess !== null && openProcessIndex !== null && (
+          <motion.div
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+            onClick={() => setOpenProcessIndex(null)}
+            className="fixed inset-0 z-[60] bg-black/75 backdrop-blur-sm flex items-center justify-center p-4"
+          >
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.95, opacity: 0, y: 20 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative bg-background rounded-3xl overflow-hidden w-full max-w-[900px] flex flex-col md:flex-row"
+              style={{ maxHeight: "88dvh" }}
+            >
+              {/* Close button */}
+              <button
+                onClick={() => setOpenProcessIndex(null)}
+                className="absolute top-3 right-3 z-20 w-8 h-8 rounded-full bg-background/90 backdrop-blur flex items-center justify-center hover:bg-background border border-border/50 transition-colors"
+                aria-label="Tutup modal"
+              >
+                <X className="w-4 h-4" />
+              </button>
+
+              {/* Image — left on desktop, top on mobile (fixed height, no shrink) */}
+              <div className="w-full md:w-[45%] shrink-0 relative overflow-hidden h-44 sm:h-56 md:h-auto md:min-h-[460px]">
+                <AnimatePresence mode="wait" custom={slideDir}>
+                  <motion.img
+                    key={openProcessIndex}
+                    custom={slideDir}
+                    variants={{
+                      enter: (dir: number) => ({ x: dir * 60, opacity: 0 }),
+                      center: { x: 0, opacity: 1 },
+                      exit: (dir: number) => ({ x: dir * -60, opacity: 0 }),
+                    }}
+                    initial="enter"
+                    animate="center"
+                    exit="exit"
+                    transition={{ duration: 0.35, ease: "easeInOut" }}
+                    src={activeProcess.img}
+                    alt={activeProcess.title}
+                    className="w-full h-full object-cover cursor-zoom-in"
+                    onClick={() => setZoomImg({ src: activeProcess.img, alt: activeProcess.title })}
+                  />
+                </AnimatePresence>
+                {/* Zoom hint */}
+                <div className="absolute top-3 right-3 w-7 h-7 rounded-full bg-background/80 backdrop-blur flex items-center justify-center pointer-events-none">
+                  <svg className="w-3.5 h-3.5 text-foreground/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                    <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                  </svg>
+                </div>
+                {/* Step number overlay */}
+                <div className="absolute bottom-3 left-3 w-10 h-10 rounded-xl bg-background/90 backdrop-blur flex items-center justify-center shadow">
+                  <span className="font-serif text-base font-bold text-primary">{activeProcess.n}</span>
+                </div>
+              </div>
+
+              {/* Content — right on desktop, bottom on mobile */}
+              <div className="flex-1 flex flex-col min-h-0 p-5 sm:p-7 md:p-10">
+                {/* Progress indicator — always visible */}
+                <div className="flex items-center gap-2 mb-4 shrink-0">
+                  <span className="text-[10px] text-foreground/50 uppercase tracking-[0.18em] font-medium shrink-0">
+                    {openProcessIndex + 1} dari {processSteps.length}
+                  </span>
+                  <div className="flex-1 h-1 rounded-full bg-border overflow-hidden">
+                    <motion.div
+                      className="h-full bg-primary rounded-full"
+                      initial={false}
+                      animate={{ width: `${((openProcessIndex + 1) / processSteps.length) * 100}%` }}
+                      transition={{ duration: 0.4, ease: "easeInOut" }}
+                    />
+                  </div>
+                </div>
+
+                {/* Scrollable text area */}
+                <div className="flex-1 min-h-0 overflow-y-auto pr-1">
+                  <AnimatePresence mode="wait" custom={slideDir}>
+                    <motion.div
+                      key={openProcessIndex}
+                      custom={slideDir}
+                      variants={{
+                        enter: (dir: number) => ({ x: dir * 40, opacity: 0 }),
+                        center: { x: 0, opacity: 1 },
+                        exit: (dir: number) => ({ x: dir * -40, opacity: 0 }),
+                      }}
+                      initial="enter"
+                      animate="center"
+                      exit="exit"
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                    >
+                      <span className="text-[10px] uppercase tracking-[0.2em] text-primary font-semibold">
+                        Proses {activeProcess.n}
+                      </span>
+                      <h3 className="mt-1.5 font-serif text-2xl sm:text-3xl md:text-4xl">{activeProcess.title}</h3>
+                      <p className="mt-3 text-foreground/70 leading-relaxed text-xs sm:text-sm md:text-base pb-2">
+                        {activeProcess.detail}
+                      </p>
+                    </motion.div>
+                  </AnimatePresence>
+                </div>
+
+                {/* Step dots — always visible */}
+                <div className="flex items-center justify-center gap-1.5 mt-4 shrink-0">
+                  {processSteps.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => { setSlideDir(idx > openProcessIndex ? 1 : -1); setOpenProcessIndex(idx); }}
+                      aria-label={`Proses ${idx + 1}`}
+                      className={`rounded-full transition-all duration-300 ${
+                        idx === openProcessIndex
+                          ? "w-5 h-2 bg-primary"
+                          : "w-2 h-2 bg-border hover:bg-primary/40"
+                      }`}
+                    />
+                  ))}
+                </div>
+
+                {/* Prev / Next buttons — always visible at bottom */}
+                <div className="flex items-center justify-between gap-3 mt-4 pt-4 border-t border-border shrink-0">
+                  <button
+                    onClick={goPrevProcess}
+                    className="flex items-center gap-1.5 px-4 py-2 rounded-full border border-border text-xs sm:text-sm font-medium hover:bg-muted transition-colors"
+                  >
+                    <ArrowRight className="w-3.5 h-3.5 rotate-180" /> Previous
+                  </button>
+                  <button
+                    onClick={goNextProcess}
+                    className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-primary-foreground text-xs sm:text-sm font-medium hover:bg-primary/90 transition-colors"
+                  >
+                    Next <ArrowRight className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      {/* ===== IMAGE LIGHTBOX ===== */}
+      <AnimatePresence>
+        {zoomImg && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setZoomImg(null)}
+            className="fixed inset-0 z-[70] bg-black/90 backdrop-blur-md flex items-center justify-center p-4 cursor-zoom-out"
+          >
+            <button
+              onClick={() => setZoomImg(null)}
+              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+              aria-label="Tutup"
+            >
+              <X className="w-5 h-5 text-white" />
+            </button>
+            <motion.img
+              initial={{ scale: 0.88, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.88, opacity: 0 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              src={zoomImg.src}
+              alt={zoomImg.alt}
+              className="max-w-full max-h-[90vh] object-contain rounded-2xl shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <p className="absolute bottom-5 left-0 right-0 text-center text-white/60 text-sm">
+              {zoomImg.alt}
+            </p>
           </motion.div>
         )}
       </AnimatePresence>
